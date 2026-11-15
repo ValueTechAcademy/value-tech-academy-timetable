@@ -4,4 +4,7 @@ export type Lecture = {
   date: string; startTime: string; endTime: string; meetUrl: string;
   description?: string; status?: 'scheduled' | 'cancelled';
 };
-export type TimetableData = { timezone: 'Asia/Kolkata'; courses: Course[]; lectures: Lecture[] };
+export type Holiday = { id: string; date: string; name: string; description?: string };
+export type TimetableData = {
+  timezone: 'Asia/Kolkata'; courses: Course[]; lectures: Lecture[]; holidays: Holiday[];
+};

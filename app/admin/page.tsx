@@ -6,8 +6,8 @@ import { LockKeyhole, ShieldCheck } from 'lucide-react';
 
 // BASIC FRONTEND GATE ONLY: these values are included in the public JavaScript bundle.
 // Do not use this for sensitive data or as real security. Change them before publishing.
-const ADMIN_USERNAME = 'vtaadmin';
-const ADMIN_PASSWORD = 'ChangeMe-VTA-2026!';
+const ADMIN_USERNAME = 'vtapune';
+const ADMIN_PASSWORD = '412207pune';
 const SESSION_KEY = 'vta-admin-session';
 
 export default function AdminPage() {

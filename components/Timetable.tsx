@@ -14,6 +14,7 @@ import {
   ShieldCheck,
 } from 'lucide-react';
 import type { TimetableData, Lecture } from '@/lib/types';
+import { TIMETABLE_API_URL } from '@/lib/config';
 
 const BASE = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
@@ -21,6 +22,7 @@ const empty: TimetableData = {
   timezone: 'Asia/Kolkata',
   courses: [],
   lectures: [],
+  holidays: [],
 };
 
 const todayISO = () =>
@@ -77,9 +79,9 @@ export default function Timetable() {
   const [weekOffset, setWeekOffset] = useState(0);
 
   useEffect(() => {
-    fetch(`${BASE}/timetable.json`)
-      .then((r) => r.json())
-      .then((d) => setData(d))
+    fetch(TIMETABLE_API_URL || `${BASE}/timetable.json`, { cache: 'no-store' })
+      .then((r) => { if (!r.ok) throw new Error('Unable to load timetable'); return r.json(); })
+      .then((d) => setData({ ...empty, ...d, holidays: Array.isArray(d.holidays) ? d.holidays : [] }))
       .catch(() => setData(empty))
       .finally(() => setLoaded(true));
   }, []);
@@ -92,6 +94,7 @@ export default function Timetable() {
   const courseName = (id: string) => data.courses.find((c) => c.id === id)?.name || 'Course';
   const todays = sorted.filter((l) => l.date === today);
   const selectedLectures = sorted.filter((l) => l.date === selected);
+  const selectedHoliday = (data.holidays || []).find((h) => h.date === selected);
 
   const startOfWeek = useMemo(() => {
     const d = new Date(`${today}T12:00:00+05:30`);
@@ -280,14 +283,16 @@ export default function Timetable() {
 
             const d = `${month.getFullYear()}-${String(month.getMonth() + 1).padStart(2, '0')}-${String(n).padStart(2, '0')}`;
             const events = sorted.filter((l) => l.date === d);
+            const holiday = (data.holidays || []).find((h) => h.date === d);
 
             return (
               <button
                 key={d}
-                className={`calendarCell ${d === selected ? 'selected' : ''} ${d === today ? 'todayCell' : ''}`}
+                className={`calendarCell ${d === selected ? 'selected' : ''} ${d === today ? 'todayCell' : ''} ${holiday ? 'holidayCell' : ''}`}
                 onClick={() => setSelected(d)}
               >
                 <span className="cellNumber">{n}</span>
+                {holiday && <span className="holidayTag">{holiday.name}</span>}
                 {events.length > 0 && (
                   <>
                     <span className="eventDot" />
@@ -309,6 +314,7 @@ export default function Timetable() {
           <span className="countBadge">{selectedLectures.length} classes</span>
         </div>
 
+        {selectedHoliday && <p className="holidayNotice">Holiday: {selectedHoliday.name}</p>}
         {selectedLectures.length ? (
           <div className="selectedList">
             {selectedLectures.map((l) => (

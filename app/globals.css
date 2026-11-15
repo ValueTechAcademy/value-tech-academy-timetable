@@ -1125,3 +1125,25 @@ footer {
     padding: 8px 9px;
   }
 }
+
+/* Weekly repeat and holiday editor additions */
+.repeatBox, .holidayManager { border:1px solid var(--line); background:#fff; border-radius:10px; padding:13px; display:grid; gap:11px; }
+.weekdayChoices { display:flex; flex-wrap:wrap; gap:7px; }
+.weekdayChoice { display:flex!important; align-items:center; gap:5px; border:1px solid var(--line); border-radius:7px; padding:7px 9px; cursor:pointer; }
+.weekdayChoice input { width:auto!important; accent-color:var(--orange); }
+.holidayManager { margin-top:22px; background:#fffafa; border-color:#f4dada; }
+.holidayHeading { display:flex; gap:10px; align-items:center; color:#b33b3b; }
+.holidayHeading div { display:grid; gap:3px; }
+.holidayHeading b { color:var(--navy); font-size:13px; }
+.holidayHeading small, .holidayList small { color:var(--muted); font-size:10px; }
+.holidayForm { display:grid; gap:9px; }
+.holidayForm label { display:grid; gap:6px; color:#536075; font-size:11px; font-weight:700; }
+.holidayForm input { width:100%; border:1px solid #e6dada; border-radius:8px; padding:10px; background:#fff; color:var(--ink); }
+.holidayList { display:grid; gap:6px; }
+.holidayList>div { display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-top:1px solid #f1e3e3; }
+.holidayList span { display:grid; gap:3px; color:var(--navy); font-size:11px; }
+.holidayList button { border:0; background:transparent; color:#9a7b7b; cursor:pointer; }
+.calendarCell.holidayCell { background:#fff0f0; border-color:#f0caca; }
+.calendarCell.holidayCell .cellNumber { color:#b83b3b; }
+.holidayTag { color:#b83b3b; background:#ffe0e0; border-radius:4px; padding:2px 4px; font-size:9px; font-weight:800; max-width:100%; overflow:hidden; text-overflow:ellipsis; }
+.holidayNotice { margin:12px 0 0; padding:10px 12px; color:#a83232; background:#fff0f0; border:1px solid #f2d0d0; border-radius:8px; font-size:12px; }
