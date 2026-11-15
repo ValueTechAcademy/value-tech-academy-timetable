@@ -1,5 +1,155 @@
 {
   "timezone": "Asia/Kolkata",
-  "courses": [],
-  "lectures": []
+  "courses": [
+    {
+      "id": "item-1794733871645-en9i9",
+      "name": "Python for DA"
+    }
+  ],
+  "lectures": [
+    {
+      "id": "item-1794733937974-9po1t",
+      "courseId": "item-1794733871645-en9i9",
+      "title": "Introduction to NumPy",
+      "instructor": "Dattatray Palwade",
+      "date": "2026-11-18",
+      "startTime": "18:30",
+      "endTime": "21:00",
+      "meetUrl": "https://meet.google.com/ypd-anic-zom",
+      "description": "",
+      "status": "scheduled"
+    },
+    {
+      "id": "item-1794733937975-5jtt7",
+      "courseId": "item-1794733871645-en9i9",
+      "title": "Introduction to NumPy",
+      "instructor": "Dattatray Palwade",
+      "date": "2026-11-25",
+      "startTime": "18:30",
+      "endTime": "21:00",
+      "meetUrl": "https://meet.google.com/ypd-anic-zom",
+      "description": "",
+      "status": "scheduled"
+    },
+    {
+      "id": "item-1794733937975-a9sda",
+      "courseId": "item-1794733871645-en9i9",
+      "title": "Introduction to NumPy",
+      "instructor": "Dattatray Palwade",
+      "date": "2026-12-02",
+      "startTime": "18:30",
+      "endTime": "21:00",
+      "meetUrl": "https://meet.google.com/ypd-anic-zom",
+      "description": "",
+      "status": "scheduled"
+    },
+    {
+      "id": "item-1794733937975-q5tot",
+      "courseId": "item-1794733871645-en9i9",
+      "title": "Introduction to NumPy",
+      "instructor": "Dattatray Palwade",
+      "date": "2026-12-09",
+      "startTime": "18:30",
+      "endTime": "21:00",
+      "meetUrl": "https://meet.google.com/ypd-anic-zom",
+      "description": "",
+      "status": "scheduled"
+    },
+    {
+      "id": "item-1794733937975-44qwi",
+      "courseId": "item-1794733871645-en9i9",
+      "title": "Introduction to NumPy",
+      "instructor": "Dattatray Palwade",
+      "date": "2026-12-16",
+      "startTime": "18:30",
+      "endTime": "21:00",
+      "meetUrl": "https://meet.google.com/ypd-anic-zom",
+      "description": "",
+      "status": "scheduled"
+    },
+    {
+      "id": "item-1794733937975-fs8c3",
+      "courseId": "item-1794733871645-en9i9",
+      "title": "Introduction to NumPy",
+      "instructor": "Dattatray Palwade",
+      "date": "2026-12-23",
+      "startTime": "18:30",
+      "endTime": "21:00",
+      "meetUrl": "https://meet.google.com/ypd-anic-zom",
+      "description": "",
+      "status": "scheduled"
+    },
+    {
+      "id": "item-1794733937975-xjbep",
+      "courseId": "item-1794733871645-en9i9",
+      "title": "Introduction to NumPy",
+      "instructor": "Dattatray Palwade",
+      "date": "2026-12-30",
+      "startTime": "18:30",
+      "endTime": "21:00",
+      "meetUrl": "https://meet.google.com/ypd-anic-zom",
+      "description": "",
+      "status": "scheduled"
+    },
+    {
+      "id": "item-1794733937975-yu7ji",
+      "courseId": "item-1794733871645-en9i9",
+      "title": "Introduction to NumPy",
+      "instructor": "Dattatray Palwade",
+      "date": "2027-01-06",
+      "startTime": "18:30",
+      "endTime": "21:00",
+      "meetUrl": "https://meet.google.com/ypd-anic-zom",
+      "description": "",
+      "status": "scheduled"
+    },
+    {
+      "id": "item-1794733937975-g4kr7",
+      "courseId": "item-1794733871645-en9i9",
+      "title": "Introduction to NumPy",
+      "instructor": "Dattatray Palwade",
+      "date": "2027-01-13",
+      "startTime": "18:30",
+      "endTime": "21:00",
+      "meetUrl": "https://meet.google.com/ypd-anic-zom",
+      "description": "",
+      "status": "scheduled"
+    },
+    {
+      "id": "item-1794733937975-dgjo5",
+      "courseId": "item-1794733871645-en9i9",
+      "title": "Introduction to NumPy",
+      "instructor": "Dattatray Palwade",
+      "date": "2027-01-20",
+      "startTime": "18:30",
+      "endTime": "21:00",
+      "meetUrl": "https://meet.google.com/ypd-anic-zom",
+      "description": "",
+      "status": "scheduled"
+    },
+    {
+      "id": "item-1794733937975-v0yvj",
+      "courseId": "item-1794733871645-en9i9",
+      "title": "Introduction to NumPy",
+      "instructor": "Dattatray Palwade",
+      "date": "2027-01-27",
+      "startTime": "18:30",
+      "endTime": "21:00",
+      "meetUrl": "https://meet.google.com/ypd-anic-zom",
+      "description": "",
+      "status": "scheduled"
+    },
+    {
+      "id": "item-1794733937975-24324",
+      "courseId": "item-1794733871645-en9i9",
+      "title": "Introduction to NumPy",
+      "instructor": "Dattatray Palwade",
+      "date": "2027-02-03",
+      "startTime": "18:30",
+      "endTime": "21:00",
+      "meetUrl": "https://meet.google.com/ypd-anic-zom",
+      "description": "",
+      "status": "scheduled"
+    }
+  ]
 }
