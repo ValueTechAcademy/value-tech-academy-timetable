@@ -1,9 +1,1127 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap');
-:root{--navy:#071f46;--orange:#ff510d;--ink:#17243a;--muted:#758196;--line:#e7ebf1;--soft:#f5f7fa;--white:#fff;--green:#168451;--shadow:0 12px 34px rgba(7,31,70,.055)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f7f8fb;color:var(--ink);font-family:'DM Sans',Arial,sans-serif;font-size:14px}button,input,select,textarea{font:inherit}button,a{-webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}.shell{max-width:1320px;margin:auto;padding:24px 34px 20px}.topbar{min-height:80px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:18px}.brand{display:block;width:min(360px,42vw)}.brand img{width:100%;height:auto;display:block;object-fit:contain}.headerRight{display:flex;align-items:center;gap:25px}.todayPill,.timezone{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:12px;font-weight:600}.todayPill svg{color:var(--orange)}.navActive{color:var(--navy);font-weight:800;border-bottom:2px solid var(--orange);padding:10px 0}.adminLink,.backLink{display:inline-flex;align-items:center;gap:8px;color:var(--navy);font-weight:700;font-size:13px}.adminLink svg{color:var(--orange)}.intro{display:flex;align-items:end;justify-content:space-between;padding:32px 0 24px}.eyebrow{font-size:10px;letter-spacing:1.8px;font-weight:800;color:var(--orange);margin:0 0 8px}.intro h1{font-family:Manrope,sans-serif;font-size:clamp(28px,4vw,39px);letter-spacing:-1.4px;color:var(--navy);margin:0;font-weight:800}.intro h1 span{color:var(--orange)}.sub{color:var(--muted);margin:8px 0 0;font-size:14px}.timezone{background:#fff;border:1px solid var(--line);padding:10px 13px;border-radius:30px}.liveDot{width:7px;height:7px;background:#1ba36a;border-radius:50%;box-shadow:0 0 0 4px #e5f5ed}.dashboard{display:grid;grid-template-columns:minmax(300px,.82fr) minmax(0,1.65fr);gap:18px}.panel{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow)}.panelHead{display:flex;align-items:center;justify-content:space-between;gap:12px}.panel h2{font-family:Manrope,sans-serif;color:var(--navy);font-size:19px;letter-spacing:-.5px;margin:0}.countBadge{border-radius:20px;background:#fff1eb;color:#d9470c;padding:7px 11px;font-size:11px;font-weight:800;white-space:nowrap}.dateLine{color:var(--muted);font-size:12px;margin:9px 0 17px}.emptyState{min-height:190px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#9aa4b3;gap:10px;padding:22px}.emptyState svg{color:#c3cad4}.emptyState strong{color:var(--navy);font-size:13px}.emptyState span{font-size:12px;max-width:260px;line-height:1.6}.lectureList,.selectedList{display:grid;gap:10px}.lectureCard{border:1px solid var(--line);border-radius:12px;padding:13px;display:grid;grid-template-columns:1fr;gap:9px;background:#fff}.lectureTime{display:flex;align-items:center;gap:7px;color:var(--navy);font-size:11px}.lectureTime svg{color:var(--orange)}.lectureInfo h3{font-size:14px;color:var(--navy);margin:0;font-weight:800}.lectureTitleRow{display:flex;justify-content:space-between;align-items:center;gap:8px}.lectureInfo p{font-size:11px;color:var(--muted);margin:5px 0 0}.lectureInfo small{display:block;color:var(--muted);font-size:11px;margin-top:5px}.status{font-size:9px;padding:4px 7px;border-radius:12px;font-weight:800;white-space:nowrap}.status.upcoming{background:#fff2e9;color:#d94a0b}.status.live{background:#e7f7ef;color:#13824f}.status.completed{background:#f0f2f5;color:#7c8797}.status.cancelled{background:#fff0f0;color:#bd3030}.joinButton{background:var(--navy);color:white;display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:9px 12px;border-radius:8px;font-size:11px;font-weight:800;width:max-content}.joinButton:hover,.primaryButton:hover{background:#0d3269}.noMeet{font-size:10px;color:#9aa4b3}.weekControls,.monthControls{display:flex;align-items:center;gap:8px}.weekControls button,.monthControls button{border:1px solid var(--line);background:white;width:30px;height:30px;border-radius:8px;display:grid;place-items:center;color:var(--navy);cursor:pointer}.weekControls svg,.monthControls svg{width:16px}.weekRange{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:11px;margin:12px 0 17px}.weekRange button{border:0;background:none;color:var(--orange);font-size:11px;font-weight:800;cursor:pointer}.weekGrid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px}.dayColumn{min-width:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;min-height:160px}.dayColumn.isToday{border-color:#ffc3a9;background:#fffaf7}.dayHead{width:100%;border:0;background:#fafbfd;padding:10px 3px;display:flex;flex-direction:column;align-items:center;gap:5px;cursor:pointer}.dayHead span{font-size:10px;color:var(--muted);font-weight:700}.dayHead b{font-size:14px;color:var(--navy)}.isToday .dayHead{background:#fff0e9}.isToday .dayHead b{color:var(--orange)}.dayEvents{padding:6px 5px;display:grid;gap:6px}.miniEvent{background:#fff1eb;border:0;border-left:2px solid var(--orange);border-radius:5px;padding:6px 5px;text-align:left;display:grid;gap:4px;cursor:pointer;min-width:0}.miniEvent b{font-size:9px;color:var(--navy);overflow-wrap:anywhere}.miniEvent span{font-size:9px;color:#c64a1a}.noClass{color:#c4cbd4;text-align:center;font-size:12px;padding-top:12px}.monthPanel{margin-top:18px}.monthControls strong{color:var(--navy);font-size:13px;min-width:120px;text-align:center}.calendarGrid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px;margin-top:20px}.calendarWeekday{text-align:center;color:var(--muted);font-size:10px;font-weight:800;padding:7px}.calendarCell{border:1px solid #edf0f4;background:white;border-radius:9px;min-height:75px;padding:9px;text-align:left;display:flex;flex-direction:column;align-items:flex-start;gap:6px;cursor:pointer;color:var(--ink)}.calendarCell:hover{border-color:#ffb18d}.calendarCell.blank{background:transparent;border-color:transparent;cursor:default}.cellNumber{font-size:12px;font-weight:700}.calendarCell.todayCell .cellNumber{color:var(--orange)}.calendarCell.selected{border:1.5px solid var(--navy);background:#f5f8fd}.eventDot{width:6px;height:6px;background:var(--orange);border-radius:50%}.eventCount{font-size:9px;color:#c64a1a;font-weight:700}.selectedDay{border-top:1px solid var(--line);margin-top:20px;padding-top:18px;display:flex;align-items:center;justify-content:space-between}.selectedDay h3{font-family:Manrope,sans-serif;color:var(--navy);font-size:15px;margin:0}.selectedDay .eyebrow{margin-bottom:5px}.emptyInline{font-size:12px;color:var(--muted);padding:8px 0}.selectedList{margin-top:12px}.selectedList .lectureCard{grid-template-columns:170px 1fr auto;align-items:center}.selectedList .lectureTime{align-self:start;padding-top:2px}.selectedList .joinButton{white-space:nowrap}footer{display:flex;justify-content:space-between;color:#9aa4b3;font-size:10px;padding:22px 2px 4px}.adminShell .intro{padding-bottom:20px}.noticeBox{display:flex;gap:12px;background:#fff8f3;border:1px solid #ffdfcf;border-radius:12px;padding:15px 17px;color:#8f3b1b;margin-bottom:18px}.noticeBox>svg{flex:none;color:var(--orange);margin-top:2px}.noticeBox strong{font-size:12px;color:var(--navy)}.noticeBox p{font-size:11px;line-height:1.65;margin:5px 0 0;color:#765b50}.noticeBox code{background:#ffede4;padding:2px 4px;border-radius:4px}.adminGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.lectureForm{display:grid;gap:12px;margin-top:18px}.lectureForm label,.courseAdd{display:grid;gap:6px;font-size:11px;font-weight:700;color:#536075}.lectureForm input,.lectureForm select,.lectureForm textarea,.courseAdd input{width:100%;border:1px solid #dfe4eb;border-radius:8px;padding:10px 11px;background:white;color:var(--ink);outline:none;font-size:12px}.lectureForm input:focus,.lectureForm select:focus,.lectureForm textarea:focus,.courseAdd input:focus{border-color:var(--orange);box-shadow:0 0 0 3px #ff510d15}.formRow{display:grid;grid-template-columns:1fr 1fr;gap:12px}.formActions,.importExport{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.primaryButton,.secondaryButton{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:8px;padding:10px 13px;font-size:11px;font-weight:800;cursor:pointer}.primaryButton{background:var(--navy);color:white}.secondaryButton{background:#f0f2f6;color:var(--navy);border:1px solid var(--line)}.coursesPanel .panelHead{margin-bottom:18px}.bookIcon{font-size:22px;color:var(--orange)}.courseAdd{grid-template-columns:1fr 38px}.iconButton{background:var(--orange);color:white;border:0;border-radius:8px;display:grid;place-items:center;cursor:pointer}.iconButton svg{width:18px}.courseList{display:grid;gap:7px;margin-top:14px}.courseList>div{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #f0f2f5;padding:8px 2px;font-size:12px;color:var(--navy);font-weight:600}.courseList button,.recordActions button{border:0;background:transparent;color:#8d98a8;cursor:pointer;padding:5px}.importExport{margin-top:20px;display:grid}.uploadButton{position:relative}.uploadButton input{position:absolute;inset:0;opacity:0;width:100%;cursor:pointer}.noticeText{font-size:11px;color:var(--green);line-height:1.5;margin:12px 0 0}.recordsPanel{margin-top:18px}.recordCount{font:700 11px 'DM Sans';background:#f0f2f6;padding:4px 7px;border-radius:20px;margin-left:5px}.records{margin-top:14px}.record{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid #eff1f4}.record>div:first-child{display:grid;gap:5px}.record strong{font-size:12px;color:var(--navy)}.record span{font-size:10px;color:var(--muted)}.recordActions{display:flex;gap:4px}.recordActions button:hover,.courseList button:hover{color:var(--orange)}.backLink{font-size:12px}.adminShell .brand{width:min(320px,40vw)}
-@media(min-width:900px){.todayPanel .lectureCard{padding:15px}.todayPanel .lectureCard .joinButton{margin-top:2px}}
-@media(max-width:850px){.shell{padding:18px 18px}.dashboard,.adminGrid{grid-template-columns:1fr}.weekGrid{gap:4px}.dayColumn{min-height:130px}.selectedList .lectureCard{grid-template-columns:1fr}.selectedList .lectureTime{padding:0}.selectedList .joinButton{width:max-content}.calendarCell{min-height:62px;padding:7px}.eventCount{font-size:8px}}
-@media(max-width:560px){.shell{padding:12px}.topbar{min-height:64px;padding-bottom:12px}.brand{width:205px}.headerRight{gap:12px}.todayPill{display:none}.navActive{font-size:12px}.adminLink{font-size:0;gap:3px}.adminLink svg{width:19px;height:19px}.intro{align-items:flex-start;flex-direction:column;gap:14px;padding:24px 0 18px}.intro h1{font-size:29px}.panel{padding:16px;border-radius:13px}.panel h2{font-size:17px}.weekGrid{gap:3px}.dayColumn{min-height:112px}.dayHead{padding:8px 2px}.dayHead span{font-size:9px}.dayHead b{font-size:12px}.dayEvents{padding:4px 3px;gap:4px}.miniEvent{padding:5px 3px}.miniEvent b,.miniEvent span{font-size:8px}.calendarGrid{gap:4px;margin-top:13px}.calendarCell{min-height:54px;padding:6px 5px;border-radius:7px}.calendarWeekday{font-size:9px}.eventCount{display:none}.selectedDay h3{font-size:13px}.monthControls{gap:4px}.monthControls strong{min-width:105px;font-size:11px}.formRow{gap:8px}footer{font-size:9px;gap:12px}.noticeBox{padding:12px}.adminShell .brand{width:190px}.record span{line-height:1.5}}
+
+:root {
+  --navy: #071f46;
+  --orange: #ff510d;
+  --ink: #17243a;
+  --muted: #758196;
+  --line: #e7ebf1;
+  --soft: #f5f7fa;
+  --white: #fff;
+  --green: #168451;
+  --shadow: 0 12px 34px rgba(7, 31, 70, .055);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--ink);
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 14px;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.shell {
+  max-width: 1320px;
+  margin: auto;
+  padding: 24px 34px 20px;
+}
+
+.topbar {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 18px;
+}
+
+.brand {
+  display: block;
+  width: min(360px, 42vw);
+}
+
+.brand img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.todayPill, .timezone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.todayPill svg {
+  color: var(--orange);
+}
+
+.navActive {
+  color: var(--navy);
+  font-weight: 800;
+  border-bottom: 2px solid var(--orange);
+  padding: 10px 0;
+}
+
+.adminLink, .backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.adminLink svg {
+  color: var(--orange);
+}
+
+.intro {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding: 32px 0 24px;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 1.8px;
+  font-weight: 800;
+  color: var(--orange);
+  margin: 0 0 8px;
+}
+
+.intro h1 {
+  font-family: Manrope, sans-serif;
+  font-size: clamp(28px, 4vw, 39px);
+  letter-spacing: -1.4px;
+  color: var(--navy);
+  margin: 0;
+  font-weight: 800;
+}
+
+.intro h1 span {
+  color: var(--orange);
+}
+
+.sub {
+  color: var(--muted);
+  margin: 8px 0 0;
+  font-size: 14px;
+}
+
+.timezone {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 10px 13px;
+  border-radius: 30px;
+}
+
+.liveDot {
+  width: 7px;
+  height: 7px;
+  background: #1ba36a;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #e5f5ed;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: minmax(300px, .82fr) minmax(0, 1.65fr);
+  gap: 18px;
+}
+
+.panel {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: var(--shadow);
+}
+
+.panelHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.panel h2 {
+  font-family: Manrope, sans-serif;
+  color: var(--navy);
+  font-size: 19px;
+  letter-spacing: -.5px;
+  margin: 0;
+}
+
+.countBadge {
+  border-radius: 20px;
+  background: #fff1eb;
+  color: #d9470c;
+  padding: 7px 11px;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.dateLine {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 9px 0 17px;
+}
+
+.emptyState {
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #9aa4b3;
+  gap: 10px;
+  padding: 22px;
+}
+
+.emptyState svg {
+  color: #c3cad4;
+}
+
+.emptyState strong {
+  color: var(--navy);
+  font-size: 13px;
+}
+
+.emptyState span {
+  font-size: 12px;
+  max-width: 260px;
+  line-height: 1.6;
+}
+
+.lectureList, .selectedList {
+  display: grid;
+  gap: 10px;
+}
+
+.lectureCard {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 13px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 9px;
+  background: #fff;
+}
+
+.lectureTime {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--navy);
+  font-size: 11px;
+}
+
+.lectureTime svg {
+  color: var(--orange);
+}
+
+.lectureInfo h3 {
+  font-size: 14px;
+  color: var(--navy);
+  margin: 0;
+  font-weight: 800;
+}
+
+.lectureTitleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.lectureInfo p {
+  font-size: 11px;
+  color: var(--muted);
+  margin: 5px 0 0;
+}
+
+.lectureInfo small {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+.status {
+  font-size: 9px;
+  padding: 4px 7px;
+  border-radius: 12px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.status.upcoming {
+  background: #fff2e9;
+  color: #d94a0b;
+}
+
+.status.live {
+  background: #e7f7ef;
+  color: #13824f;
+}
+
+.status.completed {
+  background: #f0f2f5;
+  color: #7c8797;
+}
+
+.status.cancelled {
+  background: #fff0f0;
+  color: #bd3030;
+}
+
+.joinButton {
+  background: var(--navy);
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 800;
+  width: max-content;
+}
+
+.joinButton:hover, .primaryButton:hover {
+  background: #0d3269;
+}
+
+.noMeet {
+  font-size: 10px;
+  color: #9aa4b3;
+}
+
+.weekControls, .monthControls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.weekControls button, .monthControls button {
+  border: 1px solid var(--line);
+  background: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: var(--navy);
+  cursor: pointer;
+}
+
+.weekControls svg, .monthControls svg {
+  width: 16px;
+}
+
+.weekRange {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 11px;
+  margin: 12px 0 17px;
+}
+
+.weekRange button {
+  border: 0;
+  background: none;
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.weekGrid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.dayColumn {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  min-height: 160px;
+}
+
+.dayColumn.isToday {
+  border-color: #ffc3a9;
+  background: #fffaf7;
+}
+
+.dayHead {
+  width: 100%;
+  border: 0;
+  background: #fafbfd;
+  padding: 10px 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.dayHead span {
+  font-size: 10px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.dayHead b {
+  font-size: 14px;
+  color: var(--navy);
+}
+
+.isToday .dayHead {
+  background: #fff0e9;
+}
+
+.isToday .dayHead b {
+  color: var(--orange);
+}
+
+.dayEvents {
+  padding: 6px 5px;
+  display: grid;
+  gap: 6px;
+}
+
+.miniEvent {
+  background: #fff1eb;
+  border: 0;
+  border-left: 2px solid var(--orange);
+  border-radius: 5px;
+  padding: 6px 5px;
+  text-align: left;
+  display: grid;
+  gap: 4px;
+  cursor: pointer;
+  min-width: 0;
+}
+
+.miniEvent b {
+  font-size: 9px;
+  color: var(--navy);
+  overflow-wrap: anywhere;
+}
+
+.miniEvent span {
+  font-size: 9px;
+  color: #c64a1a;
+}
+
+.noClass {
+  color: #c4cbd4;
+  text-align: center;
+  font-size: 12px;
+  padding-top: 12px;
+}
+
+.monthPanel {
+  margin-top: 18px;
+}
+
+.monthControls strong {
+  color: var(--navy);
+  font-size: 13px;
+  min-width: 120px;
+  text-align: center;
+}
+
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 7px;
+  margin-top: 20px;
+}
+
+.calendarWeekday {
+  text-align: center;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+  padding: 7px;
+}
+
+.calendarCell {
+  border: 1px solid #edf0f4;
+  background: white;
+  border-radius: 9px;
+  min-height: 75px;
+  padding: 9px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.calendarCell:hover {
+  border-color: #ffb18d;
+}
+
+.calendarCell.blank {
+  background: transparent;
+  border-color: transparent;
+  cursor: default;
+}
+
+.cellNumber {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.calendarCell.todayCell .cellNumber {
+  color: var(--orange);
+}
+
+.calendarCell.selected {
+  border: 1.5px solid var(--navy);
+  background: #f5f8fd;
+}
+
+.eventDot {
+  width: 6px;
+  height: 6px;
+  background: var(--orange);
+  border-radius: 50%;
+}
+
+.eventCount {
+  font-size: 9px;
+  color: #c64a1a;
+  font-weight: 700;
+}
+
+.selectedDay {
+  border-top: 1px solid var(--line);
+  margin-top: 20px;
+  padding-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selectedDay h3 {
+  font-family: Manrope, sans-serif;
+  color: var(--navy);
+  font-size: 15px;
+  margin: 0;
+}
+
+.selectedDay .eyebrow {
+  margin-bottom: 5px;
+}
+
+.emptyInline {
+  font-size: 12px;
+  color: var(--muted);
+  padding: 8px 0;
+}
+
+.selectedList {
+  margin-top: 12px;
+}
+
+.selectedList .lectureCard {
+  grid-template-columns: 170px 1fr auto;
+  align-items: center;
+}
+
+.selectedList .lectureTime {
+  align-self: start;
+  padding-top: 2px;
+}
+
+.selectedList .joinButton {
+  white-space: nowrap;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  color: #9aa4b3;
+  font-size: 10px;
+  padding: 22px 2px 4px;
+}
+
+.adminShell .intro {
+  padding-bottom: 20px;
+}
+
+.noticeBox {
+  display: flex;
+  gap: 12px;
+  background: #fff8f3;
+  border: 1px solid #ffdfcf;
+  border-radius: 12px;
+  padding: 15px 17px;
+  color: #8f3b1b;
+  margin-bottom: 18px;
+}
+
+.noticeBox>svg {
+  flex: none;
+  color: var(--orange);
+  margin-top: 2px;
+}
+
+.noticeBox strong {
+  font-size: 12px;
+  color: var(--navy);
+}
+
+.noticeBox p {
+  font-size: 11px;
+  line-height: 1.65;
+  margin: 5px 0 0;
+  color: #765b50;
+}
+
+.noticeBox code {
+  background: #ffede4;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.adminGrid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 18px;
+}
+
+.lectureForm {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.lectureForm label, .courseAdd {
+  display: grid;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #536075;
+}
+
+.lectureForm input, .lectureForm select, .lectureForm textarea, .courseAdd input {
+  width: 100%;
+  border: 1px solid #dfe4eb;
+  border-radius: 8px;
+  padding: 10px 11px;
+  background: white;
+  color: var(--ink);
+  outline: none;
+  font-size: 12px;
+}
+
+.lectureForm input:focus, .lectureForm select:focus, .lectureForm textarea:focus, .courseAdd input:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px #ff510d15;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.formActions, .importExport {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.primaryButton, .secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 13px;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.primaryButton {
+  background: var(--navy);
+  color: white;
+}
+
+.secondaryButton {
+  background: #f0f2f6;
+  color: var(--navy);
+  border: 1px solid var(--line);
+}
+
+.coursesPanel .panelHead {
+  margin-bottom: 18px;
+}
+
+.bookIcon {
+  font-size: 22px;
+  color: var(--orange);
+}
+
+.courseAdd {
+  grid-template-columns: 1fr 38px;
+}
+
+.iconButton {
+  background: var(--orange);
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.iconButton svg {
+  width: 18px;
+}
+
+.courseList {
+  display: grid;
+  gap: 7px;
+  margin-top: 14px;
+}
+
+.courseList>div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f0f2f5;
+  padding: 8px 2px;
+  font-size: 12px;
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.courseList button, .recordActions button {
+  border: 0;
+  background: transparent;
+  color: #8d98a8;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.importExport {
+  margin-top: 20px;
+  display: grid;
+}
+
+.uploadButton {
+  position: relative;
+}
+
+.uploadButton input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.noticeText {
+  font-size: 11px;
+  color: var(--green);
+  line-height: 1.5;
+  margin: 12px 0 0;
+}
+
+.recordsPanel {
+  margin-top: 18px;
+}
+
+.recordCount {
+  font: 700 11px 'DM Sans';
+  background: #f0f2f6;
+  padding: 4px 7px;
+  border-radius: 20px;
+  margin-left: 5px;
+}
+
+.records {
+  margin-top: 14px;
+}
+
+.record {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eff1f4;
+}
+
+.record>div:first-child {
+  display: grid;
+  gap: 5px;
+}
+
+.record strong {
+  font-size: 12px;
+  color: var(--navy);
+}
+
+.record span {
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.recordActions {
+  display: flex;
+  gap: 4px;
+}
+
+.recordActions button:hover, .courseList button:hover {
+  color: var(--orange);
+}
+
+.backLink {
+  font-size: 12px;
+}
+
+.adminShell .brand {
+  width: min(320px, 40vw);
+}
+
+@media (min-width: 900px) {
+  .todayPanel .lectureCard {
+    padding: 15px;
+  }
+  .todayPanel .lectureCard .joinButton {
+    margin-top: 2px;
+  }
+}
+
+@media (max-width: 850px) {
+  .shell {
+    padding: 18px 18px;
+  }
+  .dashboard, .adminGrid {
+    grid-template-columns: 1fr;
+  }
+  .weekGrid {
+    gap: 4px;
+  }
+  .dayColumn {
+    min-height: 130px;
+  }
+  .selectedList .lectureCard {
+    grid-template-columns: 1fr;
+  }
+  .selectedList .lectureTime {
+    padding: 0;
+  }
+  .selectedList .joinButton {
+    width: max-content;
+  }
+  .calendarCell {
+    min-height: 62px;
+    padding: 7px;
+  }
+  .eventCount {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 560px) {
+  .shell {
+    padding: 12px;
+  }
+  .topbar {
+    min-height: 64px;
+    padding-bottom: 12px;
+  }
+  .brand {
+    width: 205px;
+  }
+  .headerRight {
+    gap: 12px;
+  }
+  .todayPill {
+    display: none;
+  }
+  .navActive {
+    font-size: 12px;
+  }
+  .adminLink {
+    font-size: 0;
+    gap: 3px;
+  }
+  .adminLink svg {
+    width: 19px;
+    height: 19px;
+  }
+  .intro {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+    padding: 24px 0 18px;
+  }
+  .intro h1 {
+    font-size: 29px;
+  }
+  .panel {
+    padding: 16px;
+    border-radius: 13px;
+  }
+  .panel h2 {
+    font-size: 17px;
+  }
+  .weekGrid {
+    gap: 3px;
+  }
+  .dayColumn {
+    min-height: 112px;
+  }
+  .dayHead {
+    padding: 8px 2px;
+  }
+  .dayHead span {
+    font-size: 9px;
+  }
+  .dayHead b {
+    font-size: 12px;
+  }
+  .dayEvents {
+    padding: 4px 3px;
+    gap: 4px;
+  }
+  .miniEvent {
+    padding: 5px 3px;
+  }
+  .miniEvent b, .miniEvent span {
+    font-size: 8px;
+  }
+  .calendarGrid {
+    gap: 4px;
+    margin-top: 13px;
+  }
+  .calendarCell {
+    min-height: 54px;
+    padding: 6px 5px;
+    border-radius: 7px;
+  }
+  .calendarWeekday {
+    font-size: 9px;
+  }
+  .eventCount {
+    display: none;
+  }
+  .selectedDay h3 {
+    font-size: 13px;
+  }
+  .monthControls {
+    gap: 4px;
+  }
+  .monthControls strong {
+    min-width: 105px;
+    font-size: 11px;
+  }
+  .formRow {
+    gap: 8px;
+  }
+  footer {
+    font-size: 9px;
+    gap: 12px;
+  }
+  .noticeBox {
+    padding: 12px;
+  }
+  .adminShell .brand {
+    width: 190px;
+  }
+  .record span {
+    line-height: 1.5;
+  }
+}
 
 /* Admin login screen */
-.adminLoginPage{min-height:100vh;background:#fff;display:grid;place-items:center;padding:24px}.adminLoginCard{width:min(100%,420px);background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px;box-shadow:0 18px 55px rgba(7,31,70,.09)}.loginBackLink{display:inline-block;color:var(--muted);font-size:12px;font-weight:700;margin-bottom:28px}.loginIcon{width:52px;height:52px;border-radius:15px;background:#fff0e9;color:var(--orange);display:grid;place-items:center;margin-bottom:22px}.adminLoginCard h1{font-family:Manrope,sans-serif;color:var(--navy);font-size:30px;letter-spacing:-1px;margin:0}.adminLoginCard h1 span{color:var(--orange)}.loginSubtitle{color:var(--muted);font-size:13px;margin:9px 0 24px}.adminLoginForm{display:grid;gap:9px}.adminLoginForm label{font-size:11px;font-weight:800;color:#536075;margin-top:7px}.adminLoginForm input{width:100%;border:1px solid #dfe4eb;border-radius:9px;padding:12px;background:#fff;color:var(--ink);outline:none;font-size:13px}.adminLoginForm input:focus{border-color:var(--orange);box-shadow:0 0 0 3px #ff510d15}.loginSubmit{width:100%;margin-top:12px;min-height:43px}.loginError{margin:4px 0;color:#bd3030;font-size:12px}.loginSecurityNote{margin:22px 0 0;padding-top:15px;border-top:1px solid var(--line);font-size:10px;line-height:1.6;color:#929bab}.adminHeaderActions{display:flex;align-items:center;gap:18px}.logoutButton{border:1px solid var(--line);background:#fff;color:var(--navy);padding:9px 12px;border-radius:8px;font-size:11px;font-weight:800;cursor:pointer}.logoutButton:hover{border-color:var(--orange);color:var(--orange)}
-@media(max-width:560px){.adminLoginCard{padding:25px 21px}.adminHeaderActions{gap:10px}.logoutButton{padding:8px 9px}}
+
+.adminLoginPage {
+  min-height: 100vh;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.adminLoginCard {
+  width: min(100%, 420px);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 34px;
+  box-shadow: 0 18px 55px rgba(7, 31, 70, .09);
+}
+
+.loginBackLink {
+  display: inline-block;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.loginIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 15px;
+  background: #fff0e9;
+  color: var(--orange);
+  display: grid;
+  place-items: center;
+  margin-bottom: 22px;
+}
+
+.adminLoginCard h1 {
+  font-family: Manrope, sans-serif;
+  color: var(--navy);
+  font-size: 30px;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.adminLoginCard h1 span {
+  color: var(--orange);
+}
+
+.loginSubtitle {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 9px 0 24px;
+}
+
+.adminLoginForm {
+  display: grid;
+  gap: 9px;
+}
+
+.adminLoginForm label {
+  font-size: 11px;
+  font-weight: 800;
+  color: #536075;
+  margin-top: 7px;
+}
+
+.adminLoginForm input {
+  width: 100%;
+  border: 1px solid #dfe4eb;
+  border-radius: 9px;
+  padding: 12px;
+  background: #fff;
+  color: var(--ink);
+  outline: none;
+  font-size: 13px;
+}
+
+.adminLoginForm input:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px #ff510d15;
+}
+
+.loginSubmit {
+  width: 100%;
+  margin-top: 12px;
+  min-height: 43px;
+}
+
+.loginError {
+  margin: 4px 0;
+  color: #bd3030;
+  font-size: 12px;
+}
+
+.loginSecurityNote {
+  margin: 22px 0 0;
+  padding-top: 15px;
+  border-top: 1px solid var(--line);
+  font-size: 10px;
+  line-height: 1.6;
+  color: #929bab;
+}
+
+.adminHeaderActions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.logoutButton {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--navy);
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.logoutButton:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+@media (max-width: 560px) {
+  .adminLoginCard {
+    padding: 25px 21px;
+  }
+  .adminHeaderActions {
+    gap: 10px;
+  }
+  .logoutButton {
+    padding: 8px 9px;
+  }
+}
