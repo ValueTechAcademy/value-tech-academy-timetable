@@ -52,6 +52,65 @@ const timeLabel = (time: string) => {
   }).format(d);
 };
 
+// Google Sheets may serialize date/time cells as ISO strings. Normalize them
+// before comparing dates or formatting times in the public calendar.
+function normalizeDate(value: unknown): string {
+  if (value instanceof Date) {
+    return new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'Asia/Kolkata', year: 'numeric', month: '2-digit', day: '2-digit',
+    }).format(value);
+  }
+  const raw = String(value ?? '').trim();
+  const match = raw.match(/^(\d{4}-\d{2}-\d{2})/);
+  if (match) return match[1];
+  const parsed = new Date(raw);
+  if (!raw || Number.isNaN(parsed.getTime())) return '';
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Asia/Kolkata', year: 'numeric', month: '2-digit', day: '2-digit',
+  }).format(parsed);
+}
+
+function normalizeTime(value: unknown): string {
+  const raw = String(value ?? '').trim();
+  const hm = raw.match(/(?:T|^)(\d{1,2}):(\d{2})(?::\d{2})?/);
+  if (hm) return `${hm[1].padStart(2, '0')}:${hm[2]}`;
+  const parsed = new Date(raw);
+  if (!raw || Number.isNaN(parsed.getTime())) return '';
+  return new Intl.DateTimeFormat('en-GB', {
+    timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
+  }).format(parsed);
+}
+
+function normalizeTimetable(input: Partial<TimetableData>): TimetableData {
+  const courses = Array.isArray(input.courses) ? input.courses : [];
+  const lectures = Array.isArray(input.lectures) ? input.lectures : [];
+  const holidays = Array.isArray(input.holidays) ? input.holidays : [];
+  return {
+    timezone: 'Asia/Kolkata',
+    courses: courses.map((course: any) => ({
+      ...course, id: String(course.id ?? ''), name: String(course.name ?? course.courseName ?? 'Course'),
+    })),
+    lectures: lectures.map((lecture: any) => ({
+      ...lecture,
+      id: String(lecture.id ?? ''),
+      courseId: String(lecture.courseId ?? lecture.courseID ?? ''),
+      title: String(lecture.title ?? lecture.lectureTitle ?? ''),
+      instructor: String(lecture.instructor ?? ''),
+      date: normalizeDate(lecture.date),
+      startTime: normalizeTime(lecture.startTime),
+      endTime: normalizeTime(lecture.endTime),
+      meetUrl: String(lecture.meetUrl ?? lecture.meetURL ?? ''),
+      description: String(lecture.description ?? ''),
+      status: lecture.status === 'cancelled' ? 'cancelled' : 'scheduled',
+    })).filter((lecture) => lecture.date && lecture.startTime && lecture.endTime),
+    holidays: holidays.map((holiday: any) => ({
+      ...holiday, id: String(holiday.id ?? ''), date: normalizeDate(holiday.date),
+      name: String(holiday.name ?? holiday.holidayName ?? 'Holiday'),
+      description: String(holiday.description ?? ''),
+    })).filter((holiday) => holiday.date),
+  };
+}
+
 function statusOf(l: Lecture, today: string) {
   if (l.status === 'cancelled') return 'Cancelled';
   if (l.date < today) return 'Completed';
@@ -71,6 +130,7 @@ function statusOf(l: Lecture, today: string) {
 export default function Timetable() {
   const [data, setData] = useState<TimetableData>(empty);
   const [loaded, setLoaded] = useState(false);
+  const [apiError, setApiError] = useState('');
   const [month, setMonth] = useState(() => {
     const d = new Date();
     return new Date(d.getFullYear(), d.getMonth(), 1);
@@ -97,19 +157,21 @@ export default function Timetable() {
           throw new Error(`Timetable API returned ${response.status}`);
         }
 
-        const result: Partial<TimetableData> = await response.json();
-
+        const result = await response.json();
+        if (result?.error) throw new Error(String(result.error));
         if (!isActive) return;
 
-        setData({
-          ...empty,
-          ...result,
-          courses: Array.isArray(result.courses) ? result.courses : [],
-          lectures: Array.isArray(result.lectures) ? result.lectures : [],
-          holidays: Array.isArray(result.holidays) ? result.holidays : [],
+        const normalized = normalizeTimetable(result as Partial<TimetableData>);
+        setData(normalized);
+        setApiError('');
+        console.info('Public timetable loaded:', {
+          courses: normalized.courses.length,
+          lectures: normalized.lectures.length,
+          holidays: normalized.holidays.length,
         });
       } catch (error) {
         console.error('Unable to load timetable from Google Sheets:', error);
+        if (isActive) setApiError(error instanceof Error ? error.message : 'Unknown API error');
       } finally {
         if (isActive) setLoaded(true);
       }
@@ -198,6 +260,12 @@ export default function Timetable() {
           <p className="sub">Your learning schedule, all in one place.</p>
         </div>
       </section>
+
+      {apiError && (
+        <div role="alert" style={{ margin: '0 0 16px', padding: '12px 16px', border: '1px solid #f0b4b4', borderRadius: 10, background: '#fff1f1', color: '#9b1c1c' }}>
+          Timetable could not be loaded: {apiError}. Open the browser console for details.
+        </div>
+      )}
 
       <section className="dashboard" id="timetable">
         <article className="panel todayPanel">
