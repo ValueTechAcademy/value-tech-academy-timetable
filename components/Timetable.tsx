@@ -79,11 +79,49 @@ export default function Timetable() {
   const [weekOffset, setWeekOffset] = useState(0);
 
   useEffect(() => {
-    fetch(TIMETABLE_API_URL || `${BASE}/timetable.json`, { cache: 'no-store' })
-      .then((r) => { if (!r.ok) throw new Error('Unable to load timetable'); return r.json(); })
-      .then((d) => setData({ ...empty, ...d, holidays: Array.isArray(d.holidays) ? d.holidays : [] }))
-      .catch(() => setData(empty))
-      .finally(() => setLoaded(true));
+    if (!TIMETABLE_API_URL) {
+      console.error('TIMETABLE_API_URL is not configured.');
+      setLoaded(true);
+      return;
+    }
+
+    let isActive = true;
+
+    const loadTimetable = async () => {
+      try {
+        const response = await fetch(TIMETABLE_API_URL, {
+          cache: 'no-store',
+        });
+
+        if (!response.ok) {
+          throw new Error(`Timetable API returned ${response.status}`);
+        }
+
+        const result: Partial<TimetableData> = await response.json();
+
+        if (!isActive) return;
+
+        setData({
+          ...empty,
+          ...result,
+          courses: Array.isArray(result.courses) ? result.courses : [],
+          lectures: Array.isArray(result.lectures) ? result.lectures : [],
+          holidays: Array.isArray(result.holidays) ? result.holidays : [],
+        });
+      } catch (error) {
+        console.error('Unable to load timetable from Google Sheets:', error);
+      } finally {
+        if (isActive) setLoaded(true);
+      }
+    };
+
+    loadTimetable();
+    const refreshInterval = window.setInterval(loadTimetable, 30_000);
+
+    return () => {
+      isActive = false;
+      window.clearInterval(refreshInterval);
+    };
   }, []);
 
   const today = todayISO();
