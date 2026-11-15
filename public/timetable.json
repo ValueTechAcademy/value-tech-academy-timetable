@@ -2,14 +2,18 @@
   "timezone": "Asia/Kolkata",
   "courses": [
     {
-      "id": "item-1794733871645-en9i9",
+      "id": "item-1794734868254-6fsu5",
       "name": "Python for DA"
+    },
+    {
+      "id": "item-1794734915973-4swxj",
+      "name": "PowerBI for DA"
     }
   ],
   "lectures": [
     {
-      "id": "item-1794733937974-9po1t",
-      "courseId": "item-1794733871645-en9i9",
+      "id": "item-1794734988182-5xuzd",
+      "courseId": "item-1794734868254-6fsu5",
       "title": "Introduction to NumPy",
       "instructor": "Dattatray Palwade",
       "date": "2026-11-18",
@@ -20,8 +24,8 @@
       "status": "scheduled"
     },
     {
-      "id": "item-1794733937975-5jtt7",
-      "courseId": "item-1794733871645-en9i9",
+      "id": "item-1794734988182-0845d",
+      "courseId": "item-1794734868254-6fsu5",
       "title": "Introduction to NumPy",
       "instructor": "Dattatray Palwade",
       "date": "2026-11-25",
@@ -32,8 +36,8 @@
       "status": "scheduled"
     },
     {
-      "id": "item-1794733937975-a9sda",
-      "courseId": "item-1794733871645-en9i9",
+      "id": "item-1794734988182-yi9ey",
+      "courseId": "item-1794734868254-6fsu5",
       "title": "Introduction to NumPy",
       "instructor": "Dattatray Palwade",
       "date": "2026-12-02",
@@ -44,8 +48,8 @@
       "status": "scheduled"
     },
     {
-      "id": "item-1794733937975-q5tot",
-      "courseId": "item-1794733871645-en9i9",
+      "id": "item-1794734988182-gc306",
+      "courseId": "item-1794734868254-6fsu5",
       "title": "Introduction to NumPy",
       "instructor": "Dattatray Palwade",
       "date": "2026-12-09",
@@ -56,8 +60,8 @@
       "status": "scheduled"
     },
     {
-      "id": "item-1794733937975-44qwi",
-      "courseId": "item-1794733871645-en9i9",
+      "id": "item-1794734988182-0pb0i",
+      "courseId": "item-1794734868254-6fsu5",
       "title": "Introduction to NumPy",
       "instructor": "Dattatray Palwade",
       "date": "2026-12-16",
@@ -68,8 +72,8 @@
       "status": "scheduled"
     },
     {
-      "id": "item-1794733937975-fs8c3",
-      "courseId": "item-1794733871645-en9i9",
+      "id": "item-1794734988182-s5zv0",
+      "courseId": "item-1794734868254-6fsu5",
       "title": "Introduction to NumPy",
       "instructor": "Dattatray Palwade",
       "date": "2026-12-23",
@@ -80,8 +84,8 @@
       "status": "scheduled"
     },
     {
-      "id": "item-1794733937975-xjbep",
-      "courseId": "item-1794733871645-en9i9",
+      "id": "item-1794734988182-82bxe",
+      "courseId": "item-1794734868254-6fsu5",
       "title": "Introduction to NumPy",
       "instructor": "Dattatray Palwade",
       "date": "2026-12-30",
@@ -92,8 +96,8 @@
       "status": "scheduled"
     },
     {
-      "id": "item-1794733937975-yu7ji",
-      "courseId": "item-1794733871645-en9i9",
+      "id": "item-1794734988182-vunbp",
+      "courseId": "item-1794734868254-6fsu5",
       "title": "Introduction to NumPy",
       "instructor": "Dattatray Palwade",
       "date": "2027-01-06",
@@ -104,8 +108,8 @@
       "status": "scheduled"
     },
     {
-      "id": "item-1794733937975-g4kr7",
-      "courseId": "item-1794733871645-en9i9",
+      "id": "item-1794734988183-mhejd",
+      "courseId": "item-1794734868254-6fsu5",
       "title": "Introduction to NumPy",
       "instructor": "Dattatray Palwade",
       "date": "2027-01-13",
@@ -116,8 +120,8 @@
       "status": "scheduled"
     },
     {
-      "id": "item-1794733937975-dgjo5",
-      "courseId": "item-1794733871645-en9i9",
+      "id": "item-1794734988183-onija",
+      "courseId": "item-1794734868254-6fsu5",
       "title": "Introduction to NumPy",
       "instructor": "Dattatray Palwade",
       "date": "2027-01-20",
@@ -128,8 +132,8 @@
       "status": "scheduled"
     },
     {
-      "id": "item-1794733937975-v0yvj",
-      "courseId": "item-1794733871645-en9i9",
+      "id": "item-1794734988183-avho4",
+      "courseId": "item-1794734868254-6fsu5",
       "title": "Introduction to NumPy",
       "instructor": "Dattatray Palwade",
       "date": "2027-01-27",
@@ -140,13 +144,25 @@
       "status": "scheduled"
     },
     {
-      "id": "item-1794733937975-24324",
-      "courseId": "item-1794733871645-en9i9",
+      "id": "item-1794734988183-n8sce",
+      "courseId": "item-1794734868254-6fsu5",
       "title": "Introduction to NumPy",
       "instructor": "Dattatray Palwade",
       "date": "2027-02-03",
       "startTime": "18:30",
       "endTime": "21:00",
+      "meetUrl": "https://meet.google.com/ypd-anic-zom",
+      "description": "",
+      "status": "scheduled"
+    },
+    {
+      "id": "item-1794735043565-ow3fq",
+      "courseId": "item-1794734915973-4swxj",
+      "title": "Building an Project",
+      "instructor": "Dattatray Palwade",
+      "date": "2026-11-15",
+      "startTime": "21:00",
+      "endTime": "22:00",
       "meetUrl": "https://meet.google.com/ypd-anic-zom",
       "description": "",
       "status": "scheduled"
